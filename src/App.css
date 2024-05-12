@@ -16,22 +16,22 @@ body,
   padding: 0;
   box-sizing: border-box;
   line-height: normal;
-  margin-top: 5px;
+  
 }
 
 .content {
-  height: 99.9%;
+  /* height: auto; */
   width: 92%;
   font-family: "Source Sans Pro", sans-serif;
  position: absolute;
   background-color: #ffffff;
   border-radius: 3rem;
   margin-right: 30px;
- 
+ margin-top: 5px;
   z-index: 1;
-  
-  top: -0.3rem;
-  right: -1.5rem;
+
+  top: -.3rem;
+  right: .5rem;
   padding-right: 5rem;
   
 }
@@ -39,10 +39,11 @@ body,
 .app {
   display: flex;
   position: relative;
+  
+  justify-content: flex-start;
+height: 96vh;
+overflow: auto;
 
-  justify-content: flex-end;
-height: 98vh;
-overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -57,7 +58,7 @@ overflow: hidden;
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #f7f4f4;
 }
 
 /* Handle on hover */

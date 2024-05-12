@@ -47,8 +47,8 @@ const Line4 = () => {
     }
 
   return (
-    <div  style={{display:"flex",alignItems:'center',justifyContent:'center',width:"230px", height:"300px", marginLeft:'38px',marginBottom:"-120px",  position:"absolute"}}> 
-    <Typography style={{fontWeight:"lighter"}} sx={{position:"absolute", top:"-14px", color:"grey"}}>
+    <div  style={{display:"flex",alignItems:'center',justifyContent:'center',width:"230px", height:"300px", marginLeft:'2px',marginBottom:"-72px",  position:"absolute"}}> 
+    <Typography style={{fontWeight:"lighter"}} sx={{position:"absolute", top:"32px", color:"grey"}}>
         ORDERS
         <Typography sx={{fontWeight:"bolder", color:"blue", fontSize:"23px"}} >
             2,980

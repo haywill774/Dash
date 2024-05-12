@@ -1,4 +1,4 @@
-import { createContext, useState, useMemo, useRef, useEffect } from "react";
+import { createContext, useState, useMemo } from "react";
 import { createTheme } from '@mui/material/styles';
 
 
@@ -142,11 +142,11 @@ indigo: {
 }) 
 })
 
-export const theme =createTheme({
+export const themes = createTheme({
     breakpoints:{
         values:{
-            mobile: 600,
-            tablet:800,
+            mobile: 430,
+            tablet:480,
             laptop:1024,
         }
     }
@@ -211,6 +211,6 @@ export const useMode =()=>{
         }),[]
     )
     const theme = useMemo(()=> createTheme(themeSettings (mode)),[mode]);
-    return [theme, colorMode]
+    return [theme, themes, colorMode]
 }
 

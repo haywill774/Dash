@@ -80,15 +80,16 @@ const Topbar = () => {
         
         {/* ICONS */}
         <StyledIcon display="flex" sx={{cursor:"pointer", display:{xs:"none",md:"none",lg:"flex"}}} >
-          <IconButton sx={{position:"absolute"}}>
-          <Badge sx={{mr:"-10px"}} badgeContent={1} color="error" variant="dot">
-            <NotificationsOutlinedIcon />
+          <IconButton sx={{position:"relative", mr:"-12px"}}>
+          <NotificationsOutlinedIcon sx={{fontSize:"22px"}} />
+          <Badge sx={{mr:"-8px",position:"absolute", top:"12px"}}  badgeContent={1} color="error" variant="dot">
+           
             </Badge>
           </IconButton>
           {/* profile */}         
           <IconButton>
             <img 
-            style={{width:30, borderRadius:10, marginRight:"-90px"}}
+            style={{width:30, borderRadius:10, marginRight:"-2px"}}
             src="../../../assets/profile.jpg" 
             alt=""  />
        </IconButton>

@@ -47,15 +47,16 @@ const Line2 = () => {
     }
 
   return (
-    <div  style={{display:"flex",alignItems:'center',justifyContent:'center',width:"340px", height:"110px", marginLeft:'-0px',marginBottom:"-130px", position:"absolute"}}> 
-    <Typography style={{fontWeight:"lighter"}} sx={{position:"absolute", left:"110px", top:"-124px", color:"grey"}}>
+    <div  style={{display:"flex",alignItems:'center',justifyContent:'center',width:"700px", height:"130px", marginLeft:'-69px',marginBottom:"-69px", position:"absolute"}}> 
+     <Typography style={{fontWeight:"lighter"}} sx={{position:"absolute", left:"21rem", top:"-39px", color:"grey"}}>
         CUSTOMERS
        
     </Typography>
-    <Typography sx={{fontWeight:"bolder", color:"blue", fontSize:"23px",position:"absolute", left:"125px", top:"-104px"}} >
+    <Typography sx={{fontWeight:"bolder", color:"blue", fontSize:"23px",position:"absolute", left:"22rem", top:"-19px"}} >
           4,628
         </Typography>
-    <Line data={data} options={options}> </Line> </div>
+    <Line data={data} options={options}> </Line> 
+   </div>
   )
 }
 

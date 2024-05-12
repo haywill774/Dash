@@ -1,4 +1,4 @@
-import {Box, Badge,IconButton,useTheme,Typography,Button} from "@mui/material";
+import {Box,useTheme,Typography,Button} from "@mui/material";
 import { tokens } from "../../../theme";
 import Lines from "../chart/Line";
 import { BarCharts } from "../chart/bar";
@@ -9,10 +9,8 @@ import { RiNetflixFill } from "react-icons/ri";
 import DriveFileRenameOutlineSharpIcon from '@mui/icons-material/DriveFileRenameOutlineSharp';
 import Line2 from "../chart/Line2";
 import Line3 from "../chart/Line3"
-import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import { PiChatTeardropFill } from "react-icons/pi";
-import SignalCellularAltSharpIcon from '@mui/icons-material/SignalCellularAltSharp';
-import { RiGalleryFill } from "react-icons/ri";
+
+// import { Scrollbar } from 'react-scrollbars-custom';
 
 
 
@@ -25,8 +23,8 @@ const Dashboard = () => {
     
   return (
     
-    <Box display={"grid"} gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="170px" gap="20px" ml="8%">
-
+    <Box display={"grid"} gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="178px" gap="10px" ml="8%">
+  {/* <Scrollbar style={{ width: 250, height: 100 }}> */}
 
     {/* ROW 1 */}
     <Box position="relative" gridColumn="span 3" bgcolor={colors.white[600]} display="flex" borderRadius="10px" justifyContent="space-around" alignItems="center" sx={{boxShadow: "1px 9px 8px 5px rgba(240,229,229,1)",display:{xs:"none",md:"none",lg:"flex"} }}>
@@ -141,80 +139,7 @@ const Dashboard = () => {
           </Box>
 </Box>
 
-      {/* external small screen */}
-<Box gridColumn="span 9" gridRow="span 4" bgcolor={colors.white[100]} display="flex" justifyContent="center" alignItems="center" position="relative" left="90px" mb="-3rem" mt="1rem" borderRadius="15px" sx={{boxShadow: "1px 9px 8px 5px rgba(240,229,229,1)", display:{xs:"none",sm:"flex",md:"none",lg:"none"}}}  >
-      <Box >
-      <IconButton >
-    <PiChatTeardropFill  style = {{transform: 'rotate(270deg)', color:"purple", display:"flex", marginLeft:"20",boxShadow: " 3px 3px 21.5px 2px #fffcfc", position:"absolute", top:"-290", left:"10px"}}  />
-    </IconButton>
-      <Box position="absolute" display="flex" sx={{
-        top:"1px", left:"70%"
-      }}>
-      <Box>
-      <IconButton>
-          <Badge badgeContent={1} color="error" variant="dot">
-            <NotificationsOutlinedIcon />
-            </Badge>  
-          </IconButton>
-      <IconButton >
-            <img 
-            style={{width:30, borderRadius:"9px"}}
-            src="../../../assets/profile.jpg" 
-            alt="" />
-       </IconButton>
-      </Box>
       
-      </Box>
-
-        <Box position="relative" m="0">
-       <Box sx={{bgcolor:"none"}}  position="absolute" left="35%" bottom="159px">
-       <Button  sx={{bgcolor:"#fcfcfc", borderRadius:'10px', height:"33px"}}>
-        <SignalCellularAltSharpIcon  />
-       </Button>
-       <Button sx={{bgcolor:"skyblue",borderRadius:'10px',left:"-5px"}}>
-        <RiGalleryFill  /> 
-       </Button>
-       </Box>
-
-        <Typography position="absolute" left="37%" fontSize="20px" bottom="115px" fontWeight="bolder">
-          Total Sales
-        </Typography>
-        <Button  style={{position:"absolute", right:"-25px",background:colors.purple[800], borderRadius:"15%", bottom:"79px"}}>
-                      $10,000
-                    </Button>
-                    <Stack position="relative" spacing={2} direction="row">
-                    <Button  style={{background:colors.white[200], display:"flex",alignItems:"center",justifyContent:"center",width:"90px",height:"90px", borderRadius:"50%", position:"absolute", left:"38%", boxShadow: "inset 3px 3px 21.5px 2px #fffcfc",bottom:"-15px"}}>
-
-                    <Button  style={{background:colors.white[200], width:"40px",height:"60px", borderRadius:"50%",fontWeight:"bolder", fontSize:"20px", boxShadow: "inset 3px 3px 21.5px 2px #fffcfc", bottom:"2px"}}>
-                      38%
-                      </Button>
-                      
-                    </Button>
-                    <CircularProgress size="6rem" variant="determinate" style={{position:"absolute", left:"34.9%", bottom:"-21px",color:"blue"}} value={65} />
-                    </Stack>
-                   
-        </Box>
-        
-        <Box display="flex" justifyContent="center" alignItems="center" position="relative" marginTop="100px">
-        
-        <Typography style={{position:"absolute", left:"5%",top:"-30px" ,fontWeight:"bolder", fontSize:"20px", }} >
-        My card 
-        
-        </Typography>
-        <MoreHorizSharp  sx={{ position:"absolute",  left:"90%", bottom:"26%"}} />
-                    
-                    <Box display="flex" justifyContent="center" sx={{margin:"5px",  marginBottom:"-20rem"}}>
-                    <img src="../../../assets/atm2.jpg" width="40%" height="40%" 
-                     style={{ borderRadius:"10%", }}
-                     alt="" />
-                    </Box>
-                    
-          </Box>
-
-
-          </Box>
-</Box>
-
 
         {/* ROW 2 */}
         <Box gridColumn="span 9" gridRow="span 2" bgcolor={colors.white[600]} display="flex" justifyContent="center" alignItems="center" 
@@ -224,15 +149,15 @@ const Dashboard = () => {
 </Box>
             {/* ROW 3 */}
           
-            <Box gridColumn="span 5"  bgcolor={colors.white[600]} display="flex" justifyContent="center" alignItems="center" mr={"10px"} sx={{boxShadow: "1px 9px 8px 5px rgba(240,229,229,1)", display:{xs:"none",md:"none",lg:"flex"}}} >
+            <Box gridColumn="span 5"  bgcolor={colors.white[600]} display="flex" justifyContent="center" mt="-4px"  alignItems="center" mr={"10px"} sx={{boxShadow: "1px 9px 8px 5px rgba(240,229,229,1)", display:{xs:"none",md:"none",lg:"flex", }}} >
             
             <Line3 />
             </Box>
 
-  <Box  gridColumn="span 4" bgcolor={colors.white[600]}  justifyContent="center" alignItems="center"
+  <Box  gridColumn="span 4" bgcolor={colors.white[600]}  justifyContent="center" alignItems="center"  
    m="2px" sx={{boxShadow: "1px 9px 8px 5px rgba(240,229,229,1)", display:{xs:"none",md:"none",lg:"flex"}}} >
     <Box>
-      <Box container display="flex" justifyContent="flex-start"   >
+      <Box container display="flex" justifyContent="flex-start" mt="-4px"  >
       <img src="../../../assets/profile2.jpg" width="40px" height={40} style={{margin:"5px", borderRadius:"50%"}} alt="" />
         <Typography style={{margin:"5px 1px 5px 1px", fontWeight:"bolder"}}>
           Lilly donovan
@@ -266,7 +191,7 @@ const Dashboard = () => {
 </Box>
 </Box>
       </Box>
-    
+
 </Box>
 
                 
